@@ -1,0 +1,66 @@
+==========================================
+ Enterprise Multi-Server Health Check
+==========================================
+Report generated: Mon Jun  8 08:44:50 AM PDT 2026
+Run by: peter
+Source host: rhel-admin-1
+
+------------------------------------------
+Checking server: localhost
+------------------------------------------
+Hostname:
+rhel-admin-1
+
+Uptime:
+ 08:44:50 up  7:38,  3 users,  load average: 0.00, 0.00, 0.00
+
+Disk usage:
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/rlm-root   17G  2.6G   15G  15% /
+
+Memory usage:
+               total        used        free      shared  buff/cache   available
+Mem:           1.6Gi       440Mi       1.0Gi       6.0Mi       392Mi       1.2Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Firewall state:
+running
+
+SSHD status:
+active
+enabled
+
+NGINX status:
+active
+enabled
+
+------------------------------------------
+Checking server: 192.168.195.130
+------------------------------------------
+Hostname:
+rhel-app-01
+
+Uptime:
+ 18:18:32 up  5:18,  1 user,  load average: 0.00, 0.00, 0.00
+
+Disk usage:
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/rlm-root   17G  2.3G   15G  14% /
+
+Memory usage:
+               total        used        free      shared  buff/cache   available
+Mem:           3.5Gi       600Mi       2.2Gi       9.0Mi       991Mi       3.0Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Firewall state:
+
+SSHD status:
+active
+enabled
+
+NGINX status:
+active
+enabled
+
+Health check complete.
+Report saved to: reports/health-report-2026-06-08-084450.txt

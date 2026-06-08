@@ -1,19 +1,10 @@
 #!/bin/bash
 
 INVENTORY_FILE="inventory/servers.txt"
-REPORT_DIR="reports"
-TIMESTAMP=$(date +"%Y-%m-%d-%H%M%S")
-REPORT_FILE="$REPORT_DIR/health-report-$TIMESTAMP.txt"
 
-mkdir -p "$REPORT_DIR"
-
-{
 echo "=========================================="
 echo " Enterprise Multi-Server Health Check"
 echo "=========================================="
-echo "Report generated: $(date)"
-echo "Run by: $(whoami)"
-echo "Source host: $(hostnamectl --static)"
 echo
 
 if [ ! -f "$INVENTORY_FILE" ]; then
@@ -49,12 +40,10 @@ for SERVER in $(cat "$INVENTORY_FILE"); do
         echo
         echo "SSHD status:"
         systemctl is-active sshd
-        systemctl is-enabled sshd
 
         echo
         echo "NGINX status:"
         systemctl is-active nginx
-        systemctl is-enabled nginx
 
     else
         echo "Hostname:"
@@ -79,18 +68,13 @@ for SERVER in $(cat "$INVENTORY_FILE"); do
         echo
         echo "SSHD status:"
         ssh peter@"$SERVER" "systemctl is-active sshd"
-        ssh peter@"$SERVER" "systemctl is-enabled sshd"
 
         echo
         echo "NGINX status:"
         ssh peter@"$SERVER" "systemctl is-active nginx"
-        ssh peter@"$SERVER" "systemctl is-enabled nginx"
     fi
 
     echo
 done
 
 echo "Health check complete."
-echo "Report saved to: $REPORT_FILE"
-
-} | tee "$REPORT_FILE"

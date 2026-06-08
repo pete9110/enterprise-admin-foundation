@@ -1,0 +1,8 @@
+==========================================
+ Enterprise Multi-Server Health Check
+==========================================
+Report generated: Mon Jun  8 08:44:08 AM PDT 2026
+Run by: peter
+Source host: rhel-admin-1
+
+ERROR: Inventory file not found: inventory/servers.txt
