@@ -1,8 +1,6 @@
 #!/bin/bash
 
 SERVER="$1"
-REPORT_DIR="reports"
-TIMESTAMP=$(date +"%Y-%m-%d-%H%M%S")
 
 if [ -z "$SERVER" ]; then
     echo "Usage: $0 <server>"
@@ -11,19 +9,11 @@ if [ -z "$SERVER" ]; then
     exit 1
 fi
 
-SAFE_SERVER_NAME=$(echo "$SERVER" | tr '.' '-')
-REPORT_FILE="$REPORT_DIR/post-patch-validation-$SAFE_SERVER_NAME-$TIMESTAMP.txt"
-
-mkdir -p "$REPORT_DIR"
-
-{
 echo "=========================================="
-echo " Post-Patch Validation Report"
+echo " Post-Patch Validation"
 echo "=========================================="
 echo "Target server: $SERVER"
 echo "Validation time: $(date)"
-echo "Run by: $(whoami)"
-echo "Source host: $(hostnamectl --static)"
 echo
 
 if [ "$SERVER" = "localhost" ]; then
@@ -41,10 +31,6 @@ if [ "$SERVER" = "localhost" ]; then
     echo
     echo "Uptime:"
     uptime
-
-    echo
-    echo "Last DNF transactions:"
-    sudo dnf history | head -10
 
     echo
     echo "Firewalld:"
@@ -79,10 +65,6 @@ else
     ssh peter@"$SERVER" "uptime"
 
     echo
-    echo "Last DNF transactions:"
-    ssh -t peter@"$SERVER" "sudo dnf history | head -10"
-
-    echo
     echo "Firewalld:"
     ssh peter@"$SERVER" "systemctl is-active firewalld"
 
@@ -101,6 +83,3 @@ fi
 
 echo
 echo "Validation complete."
-echo "Report saved to: $REPORT_FILE"
-
-} | tee "$REPORT_FILE"
