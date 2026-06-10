@@ -1,0 +1,82 @@
+==========================================
+ Enterprise Sudo Audit Report
+==========================================
+Report generated: Wed Jun 10 11:35:46 AM PDT 2026
+Run by: peter
+Source host: rhel-admin-1
+
+------------------------------------------
+Checking sudo configuration on: localhost
+------------------------------------------
+Hostname:
+rhel-admin-1
+
+Sudo policy file:
+-r--r-----. 1 root root 296 Jun 10 01:19 /etc/sudoers.d/linuxadmins
+
+Sudo policy content:
+# Enterprise Admin Foundation sudo policy
+# Members of linuxadmins can run administrative commands with sudo.
+
+%linuxadmins ALL=(ALL) ALL
+
+# Log sudo command input/output for audit evidence.
+Defaults logfile="/var/log/sudo.log"
+Defaults log_input,log_output
+Defaults iolog_dir="/var/log/sudo-io"
+
+Sudoers syntax validation:
+/etc/sudoers: parsed OK
+/etc/sudoers.d/linuxadmins: parsed OK
+
+Recent sudo log entries:
+    COMMAND=/bin/ls -l /etc/sudoers.d/linuxadmins
+Jun 10 11:35:54 : peter : TTY=pts/1 ;
+    PWD=/home/peter/enterprise-admin-foundation ; USER=root ; TSID=00000P ;
+    COMMAND=/bin/cat /etc/sudoers.d/linuxadmins
+Jun 10 11:35:54 : peter : TTY=pts/1 ;
+    PWD=/home/peter/enterprise-admin-foundation ; USER=root ; TSID=00000Q ;
+    COMMAND=/sbin/visudo -cf /etc/sudoers
+Jun 10 11:35:54 : peter : TTY=pts/1 ;
+    PWD=/home/peter/enterprise-admin-foundation ; USER=root ; TSID=00000R ;
+    COMMAND=/bin/tail -10 /var/log/sudo.log
+
+------------------------------------------
+Checking sudo configuration on: 192.168.195.130
+------------------------------------------
+Hostname:
+rhel-app-01
+
+Sudo policy file:
+[sudo] password for peter: 
+-r--r-----. 1 root root 296 Jun  9 17:02 /etc/sudoers.d/linuxadmins
+
+Sudo policy content:
+# Enterprise Admin Foundation sudo policy
+# Members of linuxadmins can run administrative commands with sudo.
+
+%linuxadmins ALL=(ALL) ALL
+
+# Log sudo command input/output for audit evidence.
+Defaults logfile="/var/log/sudo.log"
+Defaults log_input,log_output
+Defaults iolog_dir="/var/log/sudo-io"
+
+Sudoers syntax validation:
+/etc/sudoers: parsed OK
+/etc/sudoers.d/linuxadmins: parsed OK
+
+Recent sudo log entries:
+Jun  9 17:51:25 : peter : TTY=pts/0 ; PWD=/home/peter ; USER=root ; TSID=00000C
+    ; COMMAND=/bin/tail -10 /var/log/sudo.log
+Jun  9 18:40:10 : peter : TTY=pts/0 ; PWD=/home/peter ; USER=root ; TSID=00000D
+    ; COMMAND=/bin/ls -l /etc/sudoers.d/linuxadmins
+Jun  9 18:40:10 : peter : TTY=pts/0 ; PWD=/home/peter ; USER=root ; TSID=00000E
+    ; COMMAND=/bin/cat /etc/sudoers.d/linuxadmins
+Jun  9 18:40:10 : peter : TTY=pts/0 ; PWD=/home/peter ; USER=root ; TSID=00000F
+    ; COMMAND=/sbin/visudo -cf /etc/sudoers
+Jun  9 18:40:10 : peter : TTY=pts/0 ; PWD=/home/peter ; USER=root ; TSID=00000G
+    ; COMMAND=/bin/tail -10 /var/log/sudo.log
+
+Sudo audit report complete.
+Report saved to: reports/sudo-audit-report-2026-06-10-113546.txt
