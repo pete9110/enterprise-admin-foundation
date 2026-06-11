@@ -1,0 +1,23 @@
+==========================================
+ Safe NGINX Change Report
+==========================================
+Target server: 192.168.195.130
+Run time: Wed Jun 10 11:03:11 PM PDT 2026
+Run by: peter
+Source host: rhel-admin-1
+
+Step 1: Confirming server hostname
+rhel-app-01
+
+Step 2: Creating NGINX config backup
+[sudo] password for peter: 
+Backup created: /etc/nginx/nginx.conf.backup-2026-06-10-230311
+
+Step 3: Testing NGINX configuration
+[sudo] password for peter: 
+nginx: [emerg] unknown directive "BAD_DIRECTIVE" in /etc/nginx/nginx.conf:85
+nginx: configuration file /etc/nginx/nginx.conf test failed
+
+ERROR: NGINX configuration test failed.
+NGINX will NOT be reloaded.
+Review the configuration before making changes.

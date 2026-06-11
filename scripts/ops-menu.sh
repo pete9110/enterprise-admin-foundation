@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_SERVER="RHEL_APP_IP"
+APP_SERVER="192.168.195.130"
 PROJECT_DIR="$HOME/enterprise-admin-foundation"
 
 cd "$PROJECT_DIR" || {
@@ -23,9 +23,10 @@ while true; do
     echo "5) Run post-patch validation for app server"
     echo "6) Show latest reports"
     echo "7) Show Git status"
-    echo "8) Exit"
+    echo "8) Safe restart NGINX on app server"
+    echo "9) Exit"
     echo
-    read -p "Choose an option [1-8]: " CHOICE
+    read -p "Choose an option [1-9]: " CHOICE
 
     case "$CHOICE" in
         1)
@@ -85,15 +86,23 @@ while true; do
             ;;
 
         8)
-            echo
-            echo "Exiting operations menu."
-            exit 0
-            ;;
+	   echo
+    	   echo "Running safe NGINX restart on app server: $APP_SERVER"
+    	   ./scripts/safe-nginx-restart.sh "$APP_SERVER"
+    	   echo
+    	   read -p "Press Enter to return to menu..."
+    	   ;;
+
+	9)
+ 	   echo	
+	   echo "Exiting operations menu."
+	   exit 0
+	   ;;  
 
         *)
-            echo
-            echo "Invalid option. Choose 1 through 8."
-            sleep 2
-            ;;
+           echo
+           echo "Invalid option. Choose 1 through 9."
+           sleep 2
+           ;;
     esac
 done

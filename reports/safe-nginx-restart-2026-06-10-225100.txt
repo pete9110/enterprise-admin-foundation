@@ -1,0 +1,19 @@
+==========================================
+ Safe NGINX Restart Report
+==========================================
+Target server: 192.168.195.130
+Run time: Wed Jun 10 10:51:00 PM PDT 2026
+Run by: peter
+Source host: rhel-admin-1
+
+Step 1: Confirming server hostname
+rhel-app-01
+
+Step 2: Creating NGINX config backup
+Backup created: /etc/nginx/nginx.conf.backup-2026-06-10-225100
+
+Step 3: Testing NGINX configuration
+
+ERROR: NGINX configuration test failed.
+NGINX will NOT be restarted.
+Review the configuration before making changes.
