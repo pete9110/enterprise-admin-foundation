@@ -56,3 +56,18 @@ Examples:
 This simulates an enterprise operations wrapper script.
 
 It helps standardize recurring administration tasks and reduces the chance of running the wrong command during troubleshooting, patching, or audit preparation.
+
+## Change Control Note
+
+This operations menu should be updated through a Git branch workflow.
+
+Recommended workflow:
+
+1. Create a feature branch.
+2. Make the script or documentation change.
+3. Review the diff.
+4. Commit the change.
+5. Merge the branch back into the main branch.
+6. Tag important stable checkpoints.
+
+This simulates enterprise change control and helps prevent untracked administrative changes.
