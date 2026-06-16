@@ -1,0 +1,44 @@
+==========================================
+ Enterprise Linux Patch Report
+==========================================
+Report generated: Thu Jun 11 11:23:50 AM PDT 2026
+Run by: peter
+Source host: rhel-admin-1
+
+------------------------------------------
+Checking available updates on: localhost
+------------------------------------------
+Hostname:
+rhel-admin-1
+
+OS version:
+Rocky Linux release 9.8 (Blue Onyx)
+
+Kernel:
+5.14.0-687.12.1.el9_8.x86_64
+
+Available package updates:
+Last metadata expiration check: 1:09:48 ago on Thu 11 Jun 2026 10:14:08 AM PDT.
+
+DNF update check exit code: 0
+
+------------------------------------------
+Checking available updates on: 192.168.195.130
+------------------------------------------
+Hostname:
+rhel-app-01
+
+OS version:
+Rocky Linux release 9.8 (Blue Onyx)
+
+Kernel:
+5.14.0-687.12.1.el9_8.x86_64
+
+Available package updates:
+[sudo] password for peter: 
+Last metadata expiration check: 2:47:43 ago on Wed 10 Jun 2026 02:50:25 AM PDT.
+
+Remote update check completed.
+
+Patch report complete.
+Report saved to: reports/patch-report-2026-06-11-112350.txt

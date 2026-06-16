@@ -1,0 +1,357 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20260616004426
+Username: WIN-ADMIN-01\Administrator
+RunAs User: WIN-ADMIN-01\Administrator
+Configuration Name: 
+Machine: WIN-ADMIN-01 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 5108
+PSVersion: 5.1.20348.558
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.558
+BuildVersion: 10.0.20348.558
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\EnterpriseAdminFoundation\reports\windows-health-report-2026-06-16-004426.txt
+==========================================
+ Enterprise Windows Server Health Check
+==========================================
+Report generated: 06/16/2026 00:44:26
+Run by: win-admin-01\administrator
+Report file: C:\EnterpriseAdminFoundation\reports\windows-health-report-2026-06-16-004426.txt
+
+
+------------------------------------------
+Hostname
+------------------------------------------
+WIN-ADMIN-01
+
+------------------------------------------
+Current User
+------------------------------------------
+win-admin-01\administrator
+
+------------------------------------------
+OS Information
+------------------------------------------
+
+WindowsProductName                      WindowsVersion OsBuildNumber OsArchitecture
+------------------                      -------------- ------------- --------------
+Windows Server 2022 Standard Evaluation 2009           20348         64-bit
+
+------------------------------------------
+Uptime
+------------------------------------------
+
+LastBootTime          Days Hours Minutes
+------------          ---- ----- -------
+6/12/2026 12:42:52 AM    4     0       1
+
+------------------------------------------
+IP Configuration
+------------------------------------------
+
+InterfaceAlias              IPAddress       PrefixLength
+--------------              ---------       ------------
+Ethernet0                   192.168.195.131           24
+Loopback Pseudo-Interface 1 127.0.0.1                  8
+
+------------------------------------------
+Disk Usage
+------------------------------------------
+
+Name UsedGB FreeGB
+---- ------ ------
+C     11.84  22.53
+D       4.7      0
+
+------------------------------------------
+Memory
+------------------------------------------
+
+TotalMemoryGB FreeMemoryGB
+------------- ------------
+            2         0.48
+
+------------------------------------------
+Windows Firewall Profiles
+------------------------------------------
+
+Name    Enabled
+----    -------
+Domain     True
+Private    True
+Public     True
+
+------------------------------------------
+Remote Desktop Registry Setting
+------------------------------------------
+
+fDenyTSConnections
+------------------
+                 0
+
+------------------------------------------
+Remote Desktop Firewall Rules
+------------------------------------------
+
+DisplayName                         Enabled
+-----------                         -------
+Remote Desktop - Shadow (TCP-In)       True
+Remote Desktop - User Mode (TCP-In)    True
+Remote Desktop - User Mode (UDP-In)    True
+
+------------------------------------------
+IIS Feature Status
+------------------------------------------
+
+Name       DisplayName      InstallState
+----       -----------      ------------
+Web-Server Web Server (IIS)    Installed
+
+------------------------------------------
+IIS Service Status
+------------------------------------------
+
+ Status Name  DisplayName                      
+ ------ ----  -----------                      
+Running W3SVC World Wide Web Publishing Service
+
+------------------------------------------
+HTTP Test
+------------------------------------------
+
+StatusCode StatusDescription
+---------- -----------------
+       200 OK
+
+------------------------------------------
+Recent System Events
+------------------------------------------
+
+
+TimeGenerated : 6/16/2026 12:44:29 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Network Setup Service service entered the running state.
+
+TimeGenerated : 6/16/2026 12:44:26 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Windows Modules Installer service entered the running state.
+
+TimeGenerated : 6/16/2026 12:41:44 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Windows Update service entered the running state.
+
+TimeGenerated : 6/16/2026 12:39:12 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Windows Modules Installer service entered the stopped state.
+
+TimeGenerated : 6/16/2026 12:38:17 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Network Setup Service service entered the stopped state.
+
+TimeGenerated : 6/16/2026 12:37:11 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Windows Modules Installer service entered the running state.
+
+TimeGenerated : 6/16/2026 12:35:33 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Network Setup Service service entered the running state.
+
+TimeGenerated : 6/16/2026 12:28:34 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Windows Update service entered the stopped state.
+
+TimeGenerated : 6/16/2026 12:27:36 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Network Setup Service service entered the stopped state.
+
+TimeGenerated : 6/16/2026 12:26:03 AM
+EntryType     : Information
+Source        : Service Control Manager
+EventID       : 7036
+Message       : The Network Setup Service service entered the running state.
+
+------------------------------------------
+Recent System Warnings and Errors
+------------------------------------------
+
+
+TimeGenerated : 6/15/2026 6:28:34 PM
+EntryType     : Warning
+Source        : e1i68x64
+EventID       : 27
+Message       : Intel(R) 82574L Gigabit Network Connection
+
+TimeGenerated : 6/15/2026 4:05:52 PM
+EntryType     : Warning
+Source        : e1i68x64
+EventID       : 27
+Message       : Intel(R) 82574L Gigabit Network Connection
+
+TimeGenerated : 6/15/2026 3:17:47 PM
+EntryType     : Warning
+Source        : e1i68x64
+EventID       : 27
+Message       : Intel(R) 82574L Gigabit Network Connection
+
+TimeGenerated : 6/15/2026 1:15:23 PM
+EntryType     : Warning
+Source        : e1i68x64
+EventID       : 27
+Message       : Intel(R) 82574L Gigabit Network Connection
+
+TimeGenerated : 6/15/2026 8:19:46 AM
+EntryType     : Warning
+Source        : Microsoft-Windows-Time-Service
+EventID       : 52
+Message       : The time service has set the time with offset 79645 seconds.
+
+TimeGenerated : 6/14/2026 10:10:12 AM
+EntryType     : Error
+Source        : Microsoft-Windows-Time-Service
+EventID       : 34
+Message       : The time service has detected that the system time needs to be  changed by 79646 seconds. The time service will not change the system time by more than 54000 seconds. Verify that your 
+                time and time zone are correct, and that the time source time.windows.com,0x8 (ntp.m|0x8|0.0.0.0:123->40.119.6.228:123) is working properly.
+
+TimeGenerated : 6/14/2026 10:09:56 AM
+EntryType     : Warning
+Source        : Microsoft-Windows-Time-Service
+EventID       : 52
+Message       : The time service has set the time with offset 79646 seconds.
+
+TimeGenerated : 6/15/2026 8:16:57 AM
+EntryType     : Warning
+Source        : Microsoft-Windows-DNS-Client
+EventID       : 1014
+Message       : The description for Event ID '1014' in Source 'Microsoft-Windows-DNS-Client' cannot be found.  The local computer may not have the necessary registry information or message DLL files 
+                to display the message, or you may not have permission to access them.  The following information is part of the event:'settings-win.data.microsoft.com', '128', '02000000C0A8C302000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                00000000000000000000000000000000000000000000000000'
+
+TimeGenerated : 6/15/2026 8:16:49 AM
+EntryType     : Warning
+Source        : e1i68x64
+EventID       : 27
+Message       : Intel(R) 82574L Gigabit Network Connection
+
+TimeGenerated : 6/15/2026 8:16:36 AM
+EntryType     : Warning
+Source        : Microsoft-Windows-Time-Service
+EventID       : 134
+Message       : NtpClient was unable to set a manual peer to use as a time source because of DNS resolution error on 'time.windows.com,0x8'. NtpClient will try again in 15 minutes and double the 
+                reattempt interval thereafter. The error was: No such host is known. (0x80072AF9)
+
+------------------------------------------
+Recent Application Events
+------------------------------------------
+
+
+TimeGenerated : 6/16/2026 12:25:05 AM
+EntryType     : Information
+Source        : Software Protection Platform Service
+EventID       : 16384
+Message       : Successfully scheduled Software Protection service for re-start at 2026-11-09T06:57:05Z. Reason: RulesEngine.
+
+TimeGenerated : 6/16/2026 12:24:35 AM
+EntryType     : Information
+Source        : Software Protection Platform Service
+EventID       : 16394
+Message       : Offline downlevel migration succeeded.
+
+TimeGenerated : 6/16/2026 12:18:36 AM
+EntryType     : Information
+Source        : Software Protection Platform Service
+EventID       : 16384
+Message       : Successfully scheduled Software Protection service for re-start at 2026-11-09T06:56:36Z. Reason: RulesEngine.
+
+TimeGenerated : 6/16/2026 12:17:34 AM
+EntryType     : Information
+Source        : Software Protection Platform Service
+EventID       : 16394
+Message       : Offline downlevel migration succeeded.
+
+TimeGenerated : 6/15/2026 6:17:21 PM
+EntryType     : Information
+Source        : edgeupdate
+EventID       : 0
+Message       : Service stopped.
+
+TimeGenerated : 6/15/2026 6:06:31 PM
+EntryType     : Information
+Source        : Software Protection Platform Service
+EventID       : 16384
+Message       : Successfully scheduled Software Protection service for re-start at 2026-11-09T06:56:31Z. Reason: RulesEngine.
+
+TimeGenerated : 6/15/2026 6:06:01 PM
+EntryType     : Information
+Source        : Software Protection Platform Service
+EventID       : 16394
+Message       : Offline downlevel migration succeeded.
+
+TimeGenerated : 6/15/2026 5:52:17 PM
+EntryType     : Information
+Source        : Software Protection Platform Service
+EventID       : 16384
+Message       : Successfully scheduled Software Protection service for re-start at 2026-11-09T06:56:17Z. Reason: RulesEngine.
+
+TimeGenerated : 6/15/2026 5:51:46 PM
+EntryType     : Information
+Source        : Software Protection Platform Service
+EventID       : 16394
+Message       : Offline downlevel migration succeeded.
+
+TimeGenerated : 6/15/2026 5:36:31 PM
+EntryType     : Information
+Source        : Software Protection Platform Service
+EventID       : 16384
+Message       : Successfully scheduled Software Protection service for re-start at 2026-11-09T06:56:31Z. Reason: RulesEngine.
+
+------------------------------------------
+Recent Application Warnings and Errors
+------------------------------------------
+
+
+TimeGenerated : 6/12/2026 12:42:44 AM
+EntryType     : Error
+Source        : VSS
+EventID       : 8193
+Message       : Volume Shadow Copy Service error: Unexpected error calling routine CoCreateInstance.  hr = 0x8007045b, A system shutdown is in progress.
+
+TimeGenerated : 6/12/2026 12:42:44 AM
+EntryType     : Error
+Source        : VSS
+EventID       : 13
+Message       : Volume Shadow Copy Service information: The COM Server with CLSID {4e14fba2-2e22-11d1-9964-00c04fbbb345} and name CEventSystem cannot be started. [0x8007045b, A system shutdown is in 
+                progress.
+
+==========================================
+Health check complete.
+Report saved to: C:\EnterpriseAdminFoundation\reports\windows-health-report-2026-06-16-004426.txt
+==========================================
+**********************
+Windows PowerShell transcript end
+End time: 20260616004430
+**********************
