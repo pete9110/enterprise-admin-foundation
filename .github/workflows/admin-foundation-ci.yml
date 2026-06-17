@@ -1,0 +1,72 @@
+name: Enterprise Admin Foundation CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  validate-repo:
+    name: Validate repository structure and scripts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository structure
+        run: |
+          find . -maxdepth 3 -type f | sort
+
+      - name: Validate required directories exist
+        run: |
+          test -d docs
+          test -d scripts
+          test -d inventory
+          test -d incidents
+
+      - name: Validate required documentation exists
+        run: |
+          test -f docs/phase-1a-linux-admin-summary.md
+          test -f docs/phase-1b-windows-admin-summary.md
+          test -f docs/ssh-hardening.md
+          test -f docs/sudo-hardening.md
+          test -f docs/git-change-control.md
+          test -f docs/windows-operations-menu.md
+
+      - name: Validate required Bash scripts exist
+        run: |
+          test -f scripts/server-health-check.sh
+          test -f scripts/multi-server-health-check.sh
+          test -f scripts/patch-report.sh
+          test -f scripts/post-patch-validation.sh
+          test -f scripts/sudo-audit-check.sh
+          test -f scripts/ops-menu.sh
+          test -f scripts/safe-nginx-restart.sh
+
+      - name: Check Bash script syntax
+        run: |
+          bash -n scripts/server-health-check.sh
+          bash -n scripts/multi-server-health-check.sh
+          bash -n scripts/patch-report.sh
+          bash -n scripts/post-patch-validation.sh
+          bash -n scripts/sudo-audit-check.sh
+          bash -n scripts/ops-menu.sh
+          bash -n scripts/safe-nginx-restart.sh
+
+      - name: Validate inventory file exists and is not empty
+        run: |
+          test -s inventory/servers.txt
+
+      - name: Validate Markdown files are not empty
+        run: |
+          find docs incidents -name "*.md" -type f -print0 | xargs -0 -I {} test -s "{}"
+
+      - name: CI summary
+        run: |
+          echo "Enterprise Admin Foundation CI validation complete."
