@@ -47,3 +47,9 @@ For that reason, the pipeline checks syntax but does not execute scripts that re
 This simulates enterprise CI validation for infrastructure scripts and operational documentation.
 
 It helps prevent broken scripts, missing files, and incomplete documentation from being merged into the main branch.
+
+## Change Control Practice
+
+Future changes to scripts should be made on feature branches and validated by CI before merging.
+
+This provides a repeatable pattern for infrastructure automation changes.
